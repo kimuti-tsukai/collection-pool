@@ -130,7 +130,7 @@ impl<T: Clearable + Default, M: InnerMut<Inner = Vec<T>> + Default> Default for 
     }
 }
 
-type RefPool<T> = Pool<T, RefCell<Vec<T>>>;
+pub type RefPool<T> = Pool<T, RefCell<Vec<T>>>;
 
 // Convenient alias types
 pub type VecPool<T> = RefPool<Vec<T>>;

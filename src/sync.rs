@@ -4,7 +4,7 @@ use std::sync::Mutex;
 use crate::Pool;
 
 /// スレッドセーフなオブジェクトプール
-type ThreadSafePool<T> = Pool<T, Mutex<Vec<T>>>;
+pub type ThreadSafePool<T> = Pool<T, Mutex<Vec<T>>>;
 
 // 便利なエイリアス型
 pub type ThreadSafeVecPool<T> = ThreadSafePool<Vec<T>>;
